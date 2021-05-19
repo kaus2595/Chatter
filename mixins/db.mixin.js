@@ -54,13 +54,18 @@ module.exports = function(collection) {
 		}
 	};
 
-	if (process.env.MONGO_URI) {
+	//TODO : Fetch this from Process.env
+	if (1) { //process.env.MONGO_URI
 		// Mongo adapter
 		const MongoAdapter = require("moleculer-db-adapter-mongo");
 
-		schema.adapter = new MongoAdapter(process.env.MONGO_URI);
+		// schema.adapter = new MongoAdapter(process.env.MONGO_URI);
+		schema.adapter = new MongoAdapter(`mongodb://localhost/chatter`);
+
+		//To input the collection in adapter key.
+		schema.adapter.collection = collection;
 		schema.collection = collection;
-	} else if (process.env.NODE_ENV === 'test') {
+	} else if (process.env.TEST) {
 		// NeDB memory adapter for testing
 		schema.adapter = new DbService.MemoryAdapter();
 	} else {

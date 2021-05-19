@@ -20,12 +20,16 @@
     "moleculer-repl": "^0.6.4"
   },
   "dependencies": {
-    "moleculer-web": "^0.9.1",
-    "moleculer-db": "^0.8.4",
-    "moleculer-db-adapter-mongo": "^0.4.7",
-    "nats": "^1.4.12",
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "crypto": "^1.0.1",
+    "dotenv": "^9.0.2",
     "ioredis": "^4.17.3",
-    "moleculer": "^0.14.13"
+    "moleculer": "^0.14.13",
+    "moleculer-db": "^0.8.4",
+    "moleculer-db-adapter-mongo": "^0.4.11",
+    "moleculer-web": "^0.9.1",
+    "nats": "^1.4.12"
   },
   "engines": {
     "node": ">= 10.x.x"
