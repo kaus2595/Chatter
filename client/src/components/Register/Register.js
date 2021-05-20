@@ -28,6 +28,9 @@ export default function Register() {
         <Link onClick={e => (!email || !password) ? e.preventDefault() : null} to={`/register`}>
           <button className={'button mt-20'} type="submit">Register</button>
         </Link>
+        <Link to={`/`}>
+          <button className={'button mt-20'} type="submit">Back</button>
+        </Link>
       </div>
     </div>
   );
