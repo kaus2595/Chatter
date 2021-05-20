@@ -68,6 +68,7 @@ module.exports = {
 				password: {type: "string"},
 			},
 			async handler(ctx) {
+				console.log("Input", ctx.params);
 				let email = ctx.params.email;
 				let full_name = ctx.params.full_name;
 				let password = ctx.params.password;
